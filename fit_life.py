@@ -6,10 +6,10 @@ ML_PER_L = 1000
 print('Добро пожаловать в приложение FitLife!')
 
 # Запрос данных о пользователе
-## имя
-user_name = input('Как вас зовут? ')
+# имя
+user_name = input('Как вас зовут? ').title()
 
-## возраст
+# возраст
 while True:
     try:
         user_age = int(input('Сколько вам полных лет? '))
@@ -20,7 +20,7 @@ while True:
     except ValueError:
         print('Введите количество полных лет числом, например: 15.')
 
-## вес
+# вес
 while True:
     try:
         user_weight = float(input('Введите ваш вес (в кг): '))
@@ -31,7 +31,7 @@ while True:
     except ValueError:
         print('Введите вес в кг, например: 80.5.')
 
-## рост
+# рост
 while True:
     try:
         user_height = float(input('Введите ваш рост (в м): '))
@@ -50,7 +50,7 @@ water_l = (user_weight * WATER_PER_KG) / ML_PER_L
 
 # Вывод отчета для пользователя
 print('=' * 45)
-print(f'Отчет для пользователя {user_name.title()}.\n')
+print(f'Отчет для пользователя {user_name}.\n')
 print(f'Ваш ИМТ (индекс массы тела): {bmi}')
 print(f'Рекомендуемая норма воды: {water_l} л. в день')
 print(f"\nРасчет окончен. Будьте здоровы!\n{'=' * 45}")
